@@ -1,12 +1,13 @@
 = form_for @post do |f|
-  .form-control
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .form-control
+    = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :summary
-    = f.text_area :summary
-  .form-control
+    = f.text_area :summary, class: 'form-control'
+  .form-group
     = f.label :body
-    = f.text_area :body
-  .form-control
-    = f.submit 'Create'
+    = f.text_area :body, class: 'form-control'
+  .btn-group
+    = f.submit 'Create', class: 'btn btn-primary'
+    = link_to 'Back', :back, class: 'btn btn-outline-secondary'
