@@ -1,0 +1,12 @@
+= form_for @post do |f|
+  .form-control
+    = f.label :title
+    = f.text_field :title
+  .form-control
+    = f.label :summary
+    = f.text_area :summary
+  .form-control
+    = f.label :body
+    = f.text_area :body
+  .form-control
+    = f.submit 'Create'
