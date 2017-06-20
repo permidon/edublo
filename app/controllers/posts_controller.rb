@@ -14,19 +14,27 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save ? (redirect_to @post) : (render :new)
+    if @post.save
+      redirect_to @post, success: 'Article was successfully created'
+    else
+      render :new, danger: 'Article was not created'
+    end
   end
 
   def edit
   end
 
   def update
-    @post.update(post_params) ? (redirect_to @post) : (render :edit)
+    if @post.update(post_params)
+      redirect_to @post, success: 'Article was successfully updated'
+    else
+      render :edit, danger: 'Article was not updated'
+    end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, success: 'Article was successfully deleted'
   end
 
   private
@@ -38,5 +46,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
 end
