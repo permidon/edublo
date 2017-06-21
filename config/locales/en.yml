@@ -30,4 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  common:
+    errors: 'Errors'
+    back: 'Back'
+    new: 'Create'
+    edit: 'Save'
+    delete: 'Delete'
+  posts:
+    index:
+      title: 'Articles'
+    new:
+      title: 'New article'
+    edit:
+      title: 'Edit article'
+    form:
+      submit: '%{action} article'
