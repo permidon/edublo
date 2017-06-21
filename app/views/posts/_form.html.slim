@@ -13,7 +13,10 @@
     = f.text_area :summary, class: 'form-control'
   .form-group
     = f.label :body
-    = f.trix_editor :body, class: 'editor'  
+    = f.trix_editor :body, class: 'editor'
+  .form-group
+    = f.label :all_tags
+    = f.text_field :all_tags, class: 'form-control'
   .form-group
     = f.file_field :image      
   .btn-group
