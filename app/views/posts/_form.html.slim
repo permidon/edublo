@@ -4,7 +4,7 @@
     ul
       -@post.errors.full_messages.each do |message|
         li= message
-= form_for @post do |f|
+= form_for @post, html: { multipart: true } do |f|
   .form-group
     = f.label :title
     = f.text_field :title, class: 'form-control'
@@ -13,7 +13,9 @@
     = f.text_area :summary, class: 'form-control'
   .form-group
     = f.label :body
-    = f.text_area :body, class: 'form-control'
+    = f.text_area :body, class: 'form-control'  
+  .form-group
+    = f.file_field :image      
   .btn-group
     = f.submit t('.submit', action: @post.new_record? ? t('common.new') : t('common.edit')), class: 'btn btn-primary'
     = link_to t('common.back'), :back, class: 'btn btn-outline-secondary'

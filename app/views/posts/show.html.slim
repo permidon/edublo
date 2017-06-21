@@ -9,4 +9,5 @@ article.post
       =link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'}
  
   section.post-body
+    = image_tag @post.image.url(:large), class: 'image-show' if @post.image?
     = @post.body
