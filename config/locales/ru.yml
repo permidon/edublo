@@ -1,0 +1,19 @@
+ru:
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    back: 'Назад'
+    new: 'Создать'
+    edit: 'Редактировать'
+    delete: 'Удалить'
+  menu:
+    blog: 'Блог'
+    contacts: 'Контакты'
+  posts:
+    index:
+      title: 'Cтатьи'
+    new:
+      title: 'Новая статья'
+    edit:
+      title: 'Редактирование статьи'
+    form:
+      submit: '%{action} статью'
