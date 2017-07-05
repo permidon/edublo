@@ -17,7 +17,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, success: 'Article was successfully created'
     else
-      render :new, danger: 'Article was not created'
+      flash.now[:danger] = 'Article was not created'
+      render :new
     end
   end
 
@@ -28,7 +29,8 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to @post, success: 'Article was successfully updated'
     else
-      render :edit, danger: 'Article was not updated'
+      flash.now[:danger] = 'Article was not updated'
+      render :edit
     end
   end
 
@@ -40,7 +42,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :summary, :body, :image, :all_tags)
+    params.require(:post).permit(:title, :summary, :body, :image, :all_tags, :category_id)
   end
 
   def set_post

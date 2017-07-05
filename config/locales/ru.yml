@@ -17,3 +17,12 @@ ru:
       title: 'Редактирование статьи'
     form:
       submit: '%{action} статью'
+category:
+  index:
+    title: 'Категории'
+  new:
+    title: 'Новая категория'
+  edit:
+    title: 'Редактирование категория'
+  form:
+    submit: '%{action} категорию'

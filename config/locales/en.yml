@@ -7,10 +7,19 @@ en:
     delete: 'Delete'
   posts:
     index:
-      title: 'Articles'
+      title: 'All Articles'
     new:
       title: 'New article'
     edit:
       title: 'Edit article'
     form:
       submit: '%{action} article'
+  categories:
+    index:
+      title: 'Categories'
+    new:
+      title: 'New category'
+    edit:
+      title: 'Edit category'
+    form:
+      submit: '%{action} category'

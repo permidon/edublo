@@ -15,6 +15,9 @@
     = f.label :body
     = f.trix_editor :body, class: 'editor'
   .form-group
+    = f.label :category_id
+    = f.collection_select :category_id, Category.order(:name), :id, :name, { include_blank: true }, class: 'form-control'
+  .form-group
     = f.label :all_tags
     = f.text_field :all_tags, class: 'form-control'
   .form-group
