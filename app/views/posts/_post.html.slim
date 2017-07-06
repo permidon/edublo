@@ -3,13 +3,14 @@ article.post
     h2= link_to post.title, post_path(post)
     small
       time= post.created_at.to_date.strftime("%d %B, %Y")
-      '  |
       - if post.category.present?
+        '  |
         =link_to post.category.name, post.category
-      '  |
-      =link_to t('common.edit'), edit_post_path(post)
-      '  |
-      =link_to t('common.delete'), post_path(post), method: :delete, data: {confirm: 'Are you sure?'}      
+      - if user_signed_in?  
+        '  |
+        =link_to t('common.edit'), edit_post_path(post)
+        '  |
+        =link_to t('common.delete'), post_path(post), method: :delete, data: {confirm: 'Are you sure?'}      
   section.post-summary.clearfix
     = image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image?
     = post.summary
