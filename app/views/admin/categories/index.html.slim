@@ -1,7 +1,7 @@
 h1= t('.title')
 
 .buttons_panel
-  = link_to 'New Category', new_category_path, class: 'btn btn-outline-primary btn-sm'
+  = link_to 'New Category', new_admin_category_path, class: 'btn btn-outline-primary btn-sm'
   
 section#categories
   table.table
@@ -18,5 +18,5 @@ section#categories
           th= category.name
           th= category.parent.name if category.parent.present?
           th
-            = link_to 'Edit', edit_category_path(category), class: 'btn btn-outline-primary btn-sm'
-            = link_to 'Delete', category_path(category), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger btn-sm'
+            = link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-outline-primary btn-sm'
+            = link_to 'Delete', admin_category_path(category), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger btn-sm'

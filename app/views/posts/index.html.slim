@@ -1,5 +1,8 @@
 h1= t('.title')
 
+- if user_signed_in? && current_user.admin?
+  = link_to t('admin.posts.new.title'), new_admin_post_path, class: 'btn btn-outline-primary btn-sm'
+
 section id='posts'
   =render @posts
 

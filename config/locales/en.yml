@@ -8,18 +8,21 @@ en:
   posts:
     index:
       title: 'All Articles'
-    new:
-      title: 'New article'
-    edit:
-      title: 'Edit article'
-    form:
-      submit: '%{action} article'
-  categories:
-    index:
-      title: 'Categories'
-    new:
-      title: 'New category'
-    edit:
-      title: 'Edit category'
-    form:
-      submit: '%{action} category'
+  admin:
+    categories:
+      index:
+        title: 'Categories'
+      new:
+        title: 'New category'
+      edit:
+        title: 'Edit category'
+      form:
+        submit: '%{action} category'
+    posts:
+      new:
+        title: 'New article'
+      edit:
+        title: 'Edit article'
+      form:
+        submit: '%{action} article'
+  
