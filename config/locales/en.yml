@@ -4,7 +4,7 @@ en:
     back: 'Back'
     new: 'Create'
     edit: 'Edit'
-    delete: 'Delete'
+    delete: 'Delete'  
   posts:
     index:
       title: 'All Articles'

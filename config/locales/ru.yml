@@ -5,24 +5,23 @@ ru:
     new: 'Создать'
     edit: 'Редактировать'
     delete: 'Удалить'
-  menu:
-    blog: 'Блог'
-    contacts: 'Контакты'
   posts:
     index:
       title: 'Cтатьи'
-    new:
-      title: 'Новая статья'
-    edit:
-      title: 'Редактирование статьи'
-    form:
-      submit: '%{action} статью'
-category:
-  index:
-    title: 'Категории'
-  new:
-    title: 'Новая категория'
-  edit:
-    title: 'Редактирование категория'
-  form:
-    submit: '%{action} категорию'
+  admin:
+    category:
+      index:
+        title: 'Категории'
+      new:
+        title: 'Новая категория'
+      edit:
+        title: 'Редактирование категория'
+      form:
+        submit: '%{action} категорию'
+    posts:
+      new:
+        title: 'Новая статья'
+      edit:
+        title: 'Редактирование статьи'
+      form:
+        submit: '%{action} статью'
