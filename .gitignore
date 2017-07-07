@@ -14,7 +14,9 @@
 /log/*.log
 /tmp
 
+# IDE files
 .idea
+.vscode
 
 /doc/examples
 config/database.yml
